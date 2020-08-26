@@ -10,8 +10,9 @@ Q - Quit"""
 
 def main():
     """Convert between temperature units"""
+    menu_options = ["C", "F", "Q"]
     print(MENU)
-    choice = get_valid_choice(MENU)
+    choice = get_valid_choice(menu_options)
     while choice != "Q":
         if choice == "C":
             unit = "F"
@@ -24,7 +25,7 @@ def main():
             celsius = convert_fahrenheit_to_celsius(fahrenheit)
             print_result(celsius, unit)
         print(MENU)
-        choice = get_valid_choice(MENU)
+        choice = get_valid_choice(menu_options)
     print("Thank you.")
 
 
