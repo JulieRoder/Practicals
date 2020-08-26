@@ -11,8 +11,23 @@ display password as *
 """
 
 LENGTH = 6
-password = input("Password (>6 letters): ")
-while len(password) < LENGTH:
-    print("Password is not long enough. Try again!")
+
+
+def main():
+    password = get_password()
+    print_starred_password(password)
+
+
+def print_starred_password(password):
+    print(len(password) * "*")
+
+
+def get_password():
     password = input("Password (>6 letters): ")
-print(len(password) * "*")
+    while len(password) < LENGTH:
+        print("Password is not long enough. Try again!")
+        password = input("Password (>6 letters): ")
+    return password
+
+
+main()
