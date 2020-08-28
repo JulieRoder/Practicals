@@ -9,6 +9,7 @@ HIGHEST_NUMBER = 45
 
 
 def main():
+    """Generate quick pick lottery ticket"""
     number_of_quick_picks = int(input("How many quick picks? "))
     quick_pick_lines = []
     draw_quick_pick_numbers(number_of_quick_picks, quick_pick_lines)
@@ -16,6 +17,7 @@ def main():
 
 
 def draw_quick_pick_numbers(number_of_quick_picks, quick_pick_lines):
+    """Draw quick pick numbers"""
     for i in range(number_of_quick_picks):
         quick_pick_numbers = []
         for j in range(NUMBER_OF_RANDOM_NUMBERS):
@@ -27,6 +29,7 @@ def draw_quick_pick_numbers(number_of_quick_picks, quick_pick_lines):
 
 
 def print_quick_pick(lines):
+    """Print the quick pick ticket"""
     for line in lines:
         line.sort()
         for i in range(len(line)):
