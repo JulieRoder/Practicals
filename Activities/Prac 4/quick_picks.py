@@ -11,11 +11,11 @@ HIGHEST_NUMBER = 45
 def main():
     number_of_quick_picks = int(input("How many quick picks? "))
     quick_pick_lines = []
-    drawing_quick_pick_numbers(number_of_quick_picks, quick_pick_lines)
+    draw_quick_pick_numbers(number_of_quick_picks, quick_pick_lines)
     print_quick_pick(quick_pick_lines)
 
 
-def drawing_quick_pick_numbers(number_of_quick_picks, quick_pick_lines):
+def draw_quick_pick_numbers(number_of_quick_picks, quick_pick_lines):
     for i in range(number_of_quick_picks):
         quick_pick_numbers = []
         for j in range(NUMBER_OF_RANDOM_NUMBERS):
