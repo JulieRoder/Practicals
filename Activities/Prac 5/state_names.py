@@ -1,5 +1,6 @@
 """
 CP1404 Practical 5
+Student name: Julie-Anne Roder
 State names in a dictionary
 """
 LENGTH_OF_SHORT_STATE = 3
@@ -9,10 +10,11 @@ print(NAMES_OF_STATES)
 
 
 def main():
+    """Accessing the Names of States dictionary."""
     state_code = input("Enter short state: ").upper()
     while state_code != "":
         if state_code in NAMES_OF_STATES:
-            print(state_code, "is", NAMES_OF_STATES[state_code])
+            print("{:<{}} is {:<}".format(state_code, LENGTH_OF_SHORT_STATE, NAMES_OF_STATES[state_code]))
         else:
             print("Invalid short state")
         state_code = input("Enter short state: ").upper()

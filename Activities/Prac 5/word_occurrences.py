@@ -1,10 +1,12 @@
 """
 CP1404 Practical 5
+Student name: Julie-Anne Roder
 Word Occurrences program
 """
 
 
 def main():
+    """Reporting the occurrences of words in user provided text."""
     longest_word = 0
     user_text = input("Text: ").lower()
     words = user_text.split(" ")
