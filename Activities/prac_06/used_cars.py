@@ -11,7 +11,7 @@ def main():
     my_car.name = "My Car"
     print("fuel =", my_car.fuel)
     print("odo =", my_car.odometer)
-    print(my_car)
+    print(my_car)  # prints class default print statement
 
     print("Car {}, {}".format(my_car.fuel, my_car.odometer))
     print("Car {self.fuel}, {self.odometer}".format(self=my_car))
@@ -22,7 +22,7 @@ def main():
     print("Limo fuel =", limo.fuel)
     limo.drive(115)
     print("Limo odo =", limo.odometer)
-    print(limo)
+    print(limo)  # prints class default print statement
 
 
 main()

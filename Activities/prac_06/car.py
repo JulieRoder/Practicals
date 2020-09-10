@@ -17,6 +17,7 @@ class Car:
         self.odometer = 0
 
     def __str__(self):
+        """Default print statement."""
         return "{}, fuel={}, odometer={}".format(self.name, self.fuel, self.odometer)
 
     def add_fuel(self, amount):
