@@ -1,7 +1,7 @@
 """CP1404/CP5632 Practical - Client code to use the Car class."""
 # Note that the import has a folder (module) in it.
 
-from prac_06.car import Car
+from Activities.prac_06.car import Car  # file location: Practicals/Activities/prac_06/car.py
 
 
 def main():
@@ -14,6 +14,13 @@ def main():
 
     print("Car {}, {}".format(my_car.fuel, my_car.odometer))
     print("Car {self.fuel}, {self.odometer}".format(self=my_car))
+
+    limo = Car(100)
+    limo.add_fuel(20)
+    print("Limo fuel =", limo.fuel)
+    limo.drive(115)
+    print("Limo odo =", limo.odometer)
+
 
 
 main()
