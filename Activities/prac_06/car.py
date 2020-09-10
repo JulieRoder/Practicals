@@ -1,4 +1,7 @@
-"""CP1404/CP5632 Practical - Car class example."""
+"""
+CP1404/CP5632 Practical - Car class example.
+Student name: Julie-Anne Roder
+"""
 
 
 class Car:
@@ -9,8 +12,12 @@ class Car:
 
         fuel: float, one unit of fuel drives one kilometre
         """
+        self.name = "Car"
         self.fuel = fuel
         self.odometer = 0
+
+    def __str__(self):
+        return "{}, fuel={}, odometer={}".format(self.name, self.fuel, self.odometer)
 
     def add_fuel(self, amount):
         """Add amount to the car's fuel."""
