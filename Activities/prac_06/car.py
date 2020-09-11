@@ -37,3 +37,15 @@ class Car:
             self.fuel -= distance
         self.odometer += distance
         return distance
+
+
+def run_tests():
+    c1 = Car()
+    c2 = Car(45)
+    c2.name = "Van"
+    print(c1)
+    print(c2)
+
+
+if __name__ == '__main__':
+    run_tests()
