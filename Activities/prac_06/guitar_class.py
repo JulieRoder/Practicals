@@ -2,12 +2,12 @@
 Guitar Class
 Student name: Julie-Anne Roder
 """
-CURRENT_YEAR = 2020
-VINTAGE_THRESHOLD = 50
 
 
 class Guitar:
     """Represents a Guitar Object."""
+    CURRENT_YEAR = 2020
+    VINTAGE_THRESHOLD = 50
 
     def __init__(self, name="", year=0, cost=0):
         """Initialises a guitar instance
@@ -24,8 +24,8 @@ class Guitar:
 
     def get_age(self):
         """Get age of guitar."""
-        return CURRENT_YEAR - self.year
+        return Guitar.CURRENT_YEAR - self.year
 
     def is_vintage(self):
         """Determine if guitar is vintage."""
-        return self.get_age() >= VINTAGE_THRESHOLD
+        return self.get_age() >= Guitar.VINTAGE_THRESHOLD
