@@ -9,7 +9,7 @@ class Guitar:
     CURRENT_YEAR = 2020
     VINTAGE_THRESHOLD = 50
 
-    def __init__(self, name="", year=0, cost=0):
+    def __init__(self, name="", year=0, cost=0.0):
         """Initialises a guitar instance
             name: make & model
             year: year guitar was made
