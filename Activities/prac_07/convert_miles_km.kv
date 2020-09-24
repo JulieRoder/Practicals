@@ -4,6 +4,8 @@ BoxLayout:
         orientation: 'horizontal'
         TextInput:
             id: input_number
+            text: '5'
+            text_size: 30
         BoxLayout:
             orientation: 'vertical'
             Button:
@@ -12,6 +14,8 @@ BoxLayout:
                 text: 'Down'
     Button:
         text: 'Convert m to km'
+        on_press: app.handle_convert(float(input_number.text))
     Label:
         id: output_label
         color: (1, 1, 0, 1)
+        text: app.message
