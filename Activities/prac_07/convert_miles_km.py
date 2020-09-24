@@ -29,17 +29,19 @@ class MilesToKilometreConverterApp(App):
 
     def handle_increment(self, increment):
         """Increase input_number by given increment."""
-        number = self.valid_number()
+        number = float(self.root.ids.input_number.text)
         new_number = number + increment
         self.root.ids.input_number.text = str(new_number)
+        self.handle_convert()
 
     def valid_number(self):
         """Returns a valid number or 0.0 ."""
         try:
             number = float(self.root.ids.input_number.text)
-            if number < 0:
+            if number < 0.0:
                 return 0.0
-            return number
+            else:
+                return number
         except ValueError:
             return 0.0
 
