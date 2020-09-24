@@ -27,5 +27,9 @@ class MilesToKilometreConverterApp(App):
         kilometres = miles * self.CONVERSION_RATE
         self.root.ids.output_label.text = str(kilometres)
 
+    def handle_increment(self, number, increment):
+        new_number = number + increment
+        self.root.ids.input_number.text = str(new_number)
+
 
 MilesToKilometreConverterApp().run()
