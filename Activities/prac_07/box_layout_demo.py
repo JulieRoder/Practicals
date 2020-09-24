@@ -1,3 +1,7 @@
+"""
+Modify Existing GUI Program
+Student name: Julie-Anne Roder
+"""
 from kivy.app import App
 from kivy.lang import Builder
 
