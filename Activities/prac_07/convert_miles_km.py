@@ -13,6 +13,7 @@ class MilesToKilometreConverterApp(App):
     """Kivy app to convert miles into kilometres."""
     CONVERSION_RATE = 1.60934
     message = StringProperty()
+    number = float()
 
     def build(self):
         """Build the App from 'convert_miles_km.kv' file."""
@@ -22,8 +23,9 @@ class MilesToKilometreConverterApp(App):
         return self.root
 
     def handle_convert(self, miles):
+        """Calculate the conversion from miles to kilometres."""
         kilometres = miles * self.CONVERSION_RATE
-        self.message = self.root.ids.output_label.text = kilometres
+        self.root.ids.output_label.text = str(kilometres)
 
 
 MilesToKilometreConverterApp().run()
