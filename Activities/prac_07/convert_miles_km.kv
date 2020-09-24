@@ -5,19 +5,22 @@ BoxLayout:
         TextInput:
             id: input_number
             text: '5'
-            text_size: 30
+            on_text: app.handle_convert()
+            font_size: 30
         BoxLayout:
             orientation: 'vertical'
             Button:
                 text: 'Up'
-                on_press: app.handle_increment(float(input_number.text), 1.0)
+                on_press: app.handle_increment(1.0)
             Button:
                 text: 'Down'
-                on_press: app.handle_increment(float(input_number.text), -1.0)
-    Button:
-        text: 'Convert miles to km'
-        on_press: app.handle_convert(float(input_number.text))
+                on_press: app.handle_increment(-1.0)
+#    Button:
+#        text: 'Convert miles to km'
+#        on_press: app.handle_convert()
     Label:
         id: output_label
+        font_size: 30
         color: (1, 1, 0, 1)
         text: app.message
+        text: '8.0467'
