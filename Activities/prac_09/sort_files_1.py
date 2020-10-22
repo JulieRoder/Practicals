@@ -14,13 +14,14 @@ def main():
     for directory_name, subdirectories, filenames in os.walk('.'):
         for filename in filenames:
             index = filename.find(".")
-            if filename[index+1:] not in file_types:
-                file_types.append(filename[index+1:])
+            file_extension = filename[index + 1:]
+            if file_extension not in file_types:
+                file_types.append(file_extension)
                 try:
-                    os.mkdir(filename[index + 1:])
+                    os.mkdir(file_extension)
                 except FileExistsError:
                     pass
-            shutil.move(filename, filename[index+1:])
+            shutil.move(filename, file_extension)
 
 
 main()
