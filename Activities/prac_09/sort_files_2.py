@@ -29,6 +29,7 @@ def main():
 
 
 def get_sort_category(filetype):
+    """Get user input on file location."""
     category = input("What category would you like to sort {} files into? ".format(filetype))
     return category
 
