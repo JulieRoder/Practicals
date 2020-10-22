@@ -16,7 +16,10 @@ def main():
             index = filename.find(".")
             if filename[index+1:] not in file_types:
                 file_types.append(filename[index+1:])
-                os.mkdir(filename[index+1:])
+                try:
+                    os.mkdir(filename[index + 1:])
+                except FileExistsError:
+                    pass
             shutil.move(filename, filename[index+1:])
 
 
