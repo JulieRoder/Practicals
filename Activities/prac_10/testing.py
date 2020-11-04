@@ -63,7 +63,7 @@ doctest.testmod()
 # 4. Fix the failing is_long_word function
 # (don't change the tests, change the function!)
 
-# TODO: 5. Write and test a function to format a phrase as a sentence,
+# 5. Write and test a function to format a phrase as a sentence,
 # starting with a capital and ending with a single full stop.
 # Important: start with a function header and just use pass as the body
 # then add doctests for 3 tests:
@@ -72,3 +72,19 @@ doctest.testmod()
 # and one more you decide (one that is valid!)
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
+
+
+def sentence_format(string):
+    """
+    >>> sentence_format('hello')
+    'Hello.'
+    >>> sentence_format('It is an ex parrot.')
+    'It is an ex parrot.'
+    >>> sentence_format('What The')
+    'What the.'
+    """
+    sentence = string[0].upper() + string[1:].lower()
+    if sentence[-1] != '.':
+        return sentence + '.'
+    else:
+        return sentence
